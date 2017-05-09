@@ -1,0 +1,1291 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+
+/* color info
+
+#F44336
+#E91E63
+#9C27B0
+#673AB7
+#3F51B5
+#2196F3
+#03A9F4
+#00BCD4
+#009688
+#4CAF50
+#8BC34A
+#CDDC39
+
+#FFEB3B
+#FFC107
+#FF9800
+#FF5722
+#795548
+
+#7ac049
+font-family: "Comic Sans MS", cursive, sans-serif !important;
+
+*/
+//
+// #homebanner .home-banner {
+//     background-color: #384245;//#263238
+//     color: #FF5722;//#FF5722,
+//     border-bottom: 3px solid #FF5722;
+//     //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+//     font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+// }
+
+
+
+
+//
+// .bannerbg
+// {
+//   background: #384245;
+//   margin-top: -20px;
+//   margin-bottom: 0px;
+//   z-index: 501;
+// }
+//
+// .header-scroll {
+//   //position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     color:#fff;
+//     z-index: 50;
+//     height: 150px;
+//
+// }
+
+
+//拉下时固定导航栏效果
+.row2_fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  z-index: 100;
+  background: #384245;
+  box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+  border-bottom: 3px solid #ff5722;
+
+}
+
+
+#flipkart-navbar {
+    background-color: #384245;//#263238
+    color: #FF5722;//#FF5722,
+    border-bottom: 3px solid #ff5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 10px;
+}
+#flipkart2-navbar {
+    margin: -21px 0px;
+    background-color: #EEEEEE;//#263238
+    color: #384245;//#FF5722,
+    height: 50px;
+    //border-bottom: 3px solid #ff5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 0px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 5px;
+}
+.productcatnav {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+/* navbar */
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 5px; //图片和链接文字拉开一点距离
+    margin-top: -25px;//不知道为什么
+    //width: 45px; //定制图片宽度
+    height: 45px; //定制图片高度
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: #000;
+}
+//navabar 2
+.navbar-nav>li>a {
+        font-size: 15px;
+        //line-height: 3.428571;
+        font-weight: 400;
+        color: #000;
+      }
+#flipkart2-navbar .navbar-nav>li>a:hover{
+  color: #ff5722;
+  //box-shadow: 0px 20px 0px -18px #ff5722;
+}
+//
+// .add{
+//   color: #ff5722;
+//   box-shadow: 0px 20px 0px -18px #ff5722;
+// }
+
+
+#homebanner001 {
+    background-color: #fafafa;//#263238 #f2f2f2
+    color: #FF5722;//#FF5722,
+    //border-bottom: 0px solid #ff5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 40px;
+    margin-top: -30px;
+}
+
+#centerlearnmore {
+  text-align: center;
+}
+.row1{
+    padding-top: 10px;
+}
+
+.row2 {
+    padding-bottom: 20px;
+    padding-top: 25px;
+}
+
+.flipkart-navbar-input {
+    padding: 11px 16px;
+    border-radius: 2px 0 0 2px;
+    //border: 1px solid #ff5722;
+    outline: 0 none;
+    font-size: 13px;
+    color: #000;
+}
+
+.flipkart-navbar-button {
+    background-color: #FF5722;//#FF5722
+    border: 1px solid #FF5722;//#FF5722
+    border-radius: 0 2px 2px 0;
+    color: #565656;
+    padding: 10px 0;
+    height: 44px;
+    cursor: pointer;
+}
+
+.cart-button {
+    background-color: #FF5722;//#FF5722
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
+    padding: 10px 0;
+    text-align: center;
+    height: 43px;
+    border-radius: 2px;
+    font-weight: 500;
+    width: 120px;
+    display: inline-block;
+    color: #212121;//ffffff
+    text-decoration: none;
+    //color: inherit;
+    border: none;
+    outline: none;
+}
+
+.cart-button:hover{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cart-svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.item-number {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    height: 20px;
+    padding: 3px 6px;
+    font-weight: 500;
+    display: inline-block;
+    color: #fff;
+    line-height: 12px;
+    margin-left: 10px;
+}
+
+.upper-links {
+    display: inline-block;
+    padding: 0 11px;
+    line-height: 23px;
+    //font-family: 'Roboto', sans-serif;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    letter-spacing: 0;
+    //color: inherit;
+    color: #212121;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.dropdown:hover {
+    background-color: #fff;
+}
+
+.dropdown:hover .links {
+    color: #384245;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: #fff;
+    color: #333;
+    left: 0px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px -3px #555454;
+    margin: 0;
+    padding: 0px;
+}
+
+.links {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+// a.links {
+//     font-size: 14px;
+//     color: #212121;
+//     text-decoration: none;
+// }
+
+.links:hover {
+    color: #FF5722;
+    text-decoration: none;
+}
+
+.profile-links {
+    font-size: 13px;
+    //font-family: 'Roboto', sans-serif;
+    //font-family: tahoma, PingFangSC-Medium, verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    border-bottom: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 11px;
+    line-height: 23px;
+}
+
+
+.profile-li{
+    padding-top: 2px;
+}
+
+.largenav {
+    display: none;
+    padding-top: -5px;
+}
+
+
+.smallnav{
+    display: block;
+}
+
+.smallsearch{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.menu{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .largenav {
+        display: block;
+    }
+    .smallnav{
+        display: none;
+    }
+    .smallsearch{
+        margin: 0px;
+    }
+}
+
+
+
+
+//banner
+.container .home-banner {
+  padding-top: 30px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    background-color: #384245;
+    background: url("/images/banner-iWatch2-gif-01.gif") right no-repeat;
+    background-size: auto 100%;
+}
+
+.container .home-banner02 {
+  padding-top: 30px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    background-color: #384245;
+    background: url("/images/app-watch-banner-06.jpg") right no-repeat;
+    background-size: auto 100%;
+}
+
+
+.inner {
+    height: auto;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+}
+
+.huge {
+    font-size: 80px;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+
+.white {
+    color: #000;
+}
+.bold {
+    font-weight: 700;
+}
+.header {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.2em;
+}
+
+.colored {
+    color: #ff5722;
+}
+.normal {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+// 去掉最下面的那个滚圈。
+
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+  //text-align:center;//竟然不是对所有页面起作用
+}
+
+//设定整个网页居中，且最宽为1024
+div.container {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1024px;
+}
+
+//首页slide
+#myCarousel .nav a small {
+    display:block;
+}
+#myCarousel .nav {
+	background:#eee;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}
+
+//首页右边的文字
+.content-container .splash-overlay {
+    direction: ltr;
+    margin-right: 1.25em;
+    margin-left: 0;
+}
+
+
+.item-heading {
+    font-size: 2.5em;
+    padding-top: 100px;
+    padding-bottom: .375em;
+}
+
+.cta-primary {
+    margin-top: 1.6875em;
+}
+
+.round-submit-1 .round-submit-button {
+  border-radius: 10px;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid #FF5722;
+  color: #FF5722;
+  line-height: 0.6;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 20px 13px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+//change the color of pills
+.nav-pills>li.active>a{
+  font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+  color: #fff !important;
+  background-color: #384245 !important;
+}
+
+.nav.nav-justified>li>a {
+    font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    background-color: #f8f8f8;
+    color: #000;
+}
+// .nav>li.active>a {
+//     font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+//     text-decoration: none;
+//     background-color: #384245;
+//     color: #fff;
+// }
+// //鼠标移动上去的颜色
+// .nav>li>a:hover,
+// .nav>li>a:focus {
+//     text-decoration: none;
+//     background-color: #384245;
+//     color: #fff;
+// }
+
+
+//welcome hot products
+.nocontent {
+  padding: 20px;
+}
+.welcome-content-title:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 28px;
+    left: 0;
+    top: calc(50% - 14px);
+    background: #FF5722;
+}
+
+
+
+
+.welcome-content-title {
+  //font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 23px;
+    font-weight: 500;
+    color: #384245;
+    //padding-top: 20px;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+
+
+//Hot product 的产品部分
+.hotproductbg {
+  background: #fafafa;
+}
+.product-item {
+    padding: 15px;
+    background: #fff;
+    margin-top: 20px;
+    position: relative;
+}
+.product-item:hover {
+    box-shadow: 1px 1px #ff5722;
+}
+.product-item:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    line-height:0;
+}
+.sticker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 63px;
+    height: 63px;
+}
+.sticker-new {
+    background: url(http://keenthemes.com/assets/bootsnipp/new.png) no-repeat;
+    left: auto;
+    right: 0;
+}
+.pi-img-wrapper {
+    position: relative;
+}
+.pi-img-wrapper div {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.product-item:hover>.pi-img-wrapper>div {
+    display: block;
+}
+.pi-img-wrapper div .btn {
+    padding: 3px 10px;
+    color: #fff;
+    border: 1px #fff solid;
+    margin: -13px 5px 0;
+    background: transparent;
+    //text-transform: uppercase;
+    position: relative;
+    top: 80%;
+    line-height: 1.4;
+    font-size: 12px;
+}
+.product-item .btn:hover {
+    background: #ff5722;
+    border-color: #c8c8c8;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 4px;
+    //text-transform: uppercase;
+}
+.product-item h3 a {
+  //font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    color: #384245;
+}
+.product-item h3 a:hover {
+    color: #ff5722;
+}
+
+.pi-price {
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    color: #ff5722;
+    font-size: 18px;
+    float: left;
+    padding-top: 1px;
+}
+
+.pi-thumbs-up {
+    color: #ff5722;
+    font-size: 16px;
+    margin:0 auto;
+    position: relative;
+    float: right;
+    //padding-left: 0px;
+    //padding-left: 0px;
+}
+.details-thumbs-up {
+  color: #ff5722;
+  font-size: 16px;
+  margin:0 auto;
+  position: relative;
+  float: left;
+}
+.product-item .add2cart {
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    //font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    float: left;
+    color: #384245;
+    border: 1px #ededed solid;
+    padding: 3px 6px;
+    //text-transform: uppercase;
+}
+
+.product-details .details-add2cart {
+
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+  float: left;
+  color: #384245;
+  border: 1px #E0E0E0 solid;
+  padding: 3px 6px;
+
+}
+
+.product-details .details-add2cart:hover {
+  color: #fff;
+  background: #e84d1c;
+  border-color: #e84d1c;
+
+}
+
+
+.product-item .add2cart:hover {
+  color: #fff;
+  background: #e84d1c;
+  border-color: #e84d1c;
+}
+
+/*footer
+.foot {
+  font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+  /* heroku ffa6b1, github fffff
+  background-color: #fcfcfc;
+  text-align: center;
+  color: #7e7e7e;
+  line-height: 60px;
+  height: 60px;
+  margin-top: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 42px;
+  z-index: 1000;
+}
+*/
+
+/*footer2*/
+
+.full {
+    width: 100%;
+}
+.gap {
+	height: 30px;
+	width: 100%;
+	clear: both;
+	display: block;
+}
+.footer {
+	background: #fcfcfc;//EDEFF1
+  font-family: PingFangSC-Medium, verdana, Geneva, sans-serif;
+  //font-family: PingFangSC-Medium, verdana, Geneva, sans-serif;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;
+}
+.footer p {
+	margin: 0;
+}
+.footer img {
+	max-width: 100%;
+}
+.footer h3 {
+	border-bottom: 1px solid #FF5722;//BAC1C8
+	color: #FF5722;//54697E
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	//text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #7F8C8D;
+}
+.footer ul li a {
+	padding: 0 0 5px 0;
+	display: block;
+}
+.footer a {
+	color: #78828D
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+.newsletter-box input#appendedInputButton {
+	background: #FFFFFF;
+	display: inline-block;
+	float: left;
+	height: 30px;
+	clear: both;
+	width: 100%;
+}
+.newsletter-box .btn {
+	border: medium none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	height: 40px;
+	padding: 0;
+	width: 100%;
+	color: #fff;
+}
+.newsletter-box {
+	overflow: hidden;
+}
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+.social li {
+	background: none repeat scroll 0 0 #B5B5B5;
+	border: 2px solid #B5B5B5;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 8px 0 0;
+	padding: 0;
+	text-align: center;
+	width: 36px;
+	transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+	transform: scale(1.15) rotate(360deg);
+	-webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+	color: #EDEFF1;
+}
+.social li:hover {
+	border: 2px solid #FF5722;//2c3e50
+	background: #FF5722;//2c3e50
+}
+.social li a i {
+	font-size: 16px;
+	margin: 0 0 0 5px;
+	color: #EDEFF1 !important;
+}
+.footer-bottom {
+  font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+  font-size: 13px;
+	background: #384245;//#e3e3e3,#fcfcfc
+	border-top: 1px solid #384245;//#dddddd, #fcfcfc
+  color: #edeff1;
+	padding-top: 17px;
+	padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+	padding-top: 6px;
+}
+.payments {
+	font-size: 1.5em;
+}
+
+
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  color: #fff;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  max-width: 430px;
+  width: 100% !important;
+  background-color: #ff5752;
+  //background-color: #384245;
+  margin: 0 auto;
+  border-radius: 2px;
+  //box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  //font-family: roboto;
+  font-family: "Comic Sans MS", verdana, PingFangSC-Medium, Geneva, sans-serif;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  //font-family: roboto;
+  font-family: "Comic Sans MS", verdana, PingFangSC-Medium, Geneva, sans-serif;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  //font-family: 'Arial', sans-serif;
+  font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #fff;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-help{
+  font-size: 12px;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: #ddd;
+    cursor: default;
+}
+
+.form-actions .btn-success {
+  background-color: #fff;
+  color: #384245;
+  border: 1px solid #fff;
+}
+
+.modal-footer .btn-danger, .modal-footer .btn-info {
+  background-color: #eee;
+  color: #384245;
+  border: 1px solid #fff;
+}
+
+// product details tab
+
+
+/* Tabs panel */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+// color
+
+
+// TAB ~~~~~~~~~~~~~~~ (.)(.)
+.tab {
+	padding-top: 30px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	width: 100%;
+	margin: 0 auto;
+	font-family: "Comic Sans MS", 'Roboto', sans-serif;
+	line-height: 1.5;
+  //font-size: 20px;
+	//font-weight: bold;
+	color: #384245;
+	-webkit-font-smoothing: antialiased;
+}
+
+.tabs {
+	display: table;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+  padding: 0;
+	width: 100%;
+  font-size: 20px;
+	font-weight: bold;
+
+	li {
+		float: left;
+		line-height: 38px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+	}
+
+	a {
+		background-color: #fff;
+		border-bottom: 1px solid #fff;
+		color: #888;
+		font-weight: 500;
+		display: block;
+		letter-spacing: 0;
+		outline: none;
+		padding: 0 20px;
+		text-decoration: none;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		border-bottom: 3px solid #ff5722;
+	}
+}
+
+.tabs_item {
+	display: none;
+	padding: 30px 0;
+
+	h4 {
+		font-weight: bold;
+		color: #ff5722;
+    font-size: 20px;
+	}
+
+	// img {
+	// 	width: 200px;
+	// 	float: left;
+	// 	margin-right: 30px;
+	// }
+
+	&:first-child {display: block;}
+}
+
+.current a {
+	color: #fff;
+	background: #ff5722;
+}
+
+// car item 界面
+
+.cart-item-01 {
+  font-family: "Comic Sans MS", verdana, PingFangSC-Medium, Geneva, sans-serif;
+}
+.panel-info {
+    border-color: #f1f1f1;
+}
+
+.panel-heading-cart {
+    color: #384245;
+    background-color: #fff;
+    border-color: #f1f1f1;
+    font-size: 20px;
+}
+.panel-info > .panel-heading {
+    color: #384245;
+    background-color: #fff;
+    border-color: #f1f1f1;
+}
+.panel-heading-cart {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.product-name-cart a {
+  color: #384245;
+  font-size: 14px;
+}
+.empty-cart-item {
+  color: #384245;
+  font-size: 16px;
+}
+
+.cart-delete-item {
+  color: #F44336;
+  font-size: 20px;
+}
+
+.panel-footer {
+    padding: 5px 15px;
+    background-color: #fff;
+    border-top: 0px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-title-cart {
+  //padding-left: -15px;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    font-weight: bold;
+}
+
+.round-submit-cart .round-submit-button-cart {
+    border-radius: 7px;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #FF5722;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+
+.round-submit-cart-pay .round-submit-button-cart-pay {
+    border-radius: 7px;
+    background-color: #FF5722;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #fff;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+.round-cancel-cart .round-cancel-button-cart {
+    border-radius: 7px;
+    background-color: #FF5722;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #000;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+.total-price-item {
+  color: #FF5722;
+  font-size: 16px;
+  margin: 10px;
+}
+.total-size {
+  font-size: 16px;
+}
+.update-item .btn-primary {
+  font-size: 13px;
+  background-color: #ff5722;
+  border: 0px;
+}
+// END TAB ~~~~~~~~~~~~~~~ (.)(.)
+
+// 控制图片的方法！！！ car的dropdown
+
+.cart-dropdown {
+   display: none;
+   position: absolute;
+   width: 350px;
+   right: 0;
+   top: 100%;
+   list-style: none;
+   margin: 0;
+   margin-top: -14px;
+   padding: 25px 20px;
+   text-align: left;
+   background-color: #ffffff;
+   border: 1px solid #ededed;
+   cursor: default;
+ }
+ //
+ // .dropdown-menu .cart-item {
+ //   position: relative;
+ //   display: table;
+ //   width: 100%;
+ //   padding: 0 0 15px 0;
+ //   border-bottom: 1px solid #ededed;
+ //   margin-bottom: 15px;
+ // }
+
+.dropdown-menu .cart-item .item-thumb,
+ .dropdown-menu .cart-item .item-details {
+   display: table-cell;
+   vertical-align: top;
+ }
+.dropdown-menu .cart-item .item-thumb {
+  width: 80px;
+  padding-right: 15px;
+}
+
+.product-name-cart-dropdown a {
+  color: #384245;
+  font-size: 12px;
+}
+.cart-delete-item-dropdown {
+  color: #F44336;
+  font-size: 17px;
+}
+
+.count-input .incr-btn {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    color: #606060;
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+}
+.count-input .incr-btn:first-child {
+    right: auto;
+    left: 0;
+}
+
+.count-input input {
+    width: 100%;
+    height: 25px;
+    border: 2px solid #ededed;
+    border-radius: 4px;
+    background: none;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+
+.count-input {
+    position: relative;
+    width: 100px;
+    margin: 10px 0;
+}
+
+//about us
+
+@media (min-width: 768px) {
+//>=768的设备
+
+    .brand-pills > li > a {
+      border-top-right-radius: 0px;
+    	border-bottom-right-radius: 0px;
+
+    }
+
+    li.brand-nav.a:after{
+    	content: " ";
+    	display: block;
+    	width: 0;
+    	height: 0;
+    	border-top: 20px solid transparent;
+    	border-bottom: 20px solid transparent;
+    	border-left: 9px solid #428bca;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -20px;
+    	left: 100%;
+    	z-index: 2;
+
+
+    }
+}

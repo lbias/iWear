@@ -1,0 +1,125 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 cart-item-01 ">
+
+      <br>
+      <div class="panel-heading-cart">
+        <div class="panel-title-cart">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              Order Items
+            </div>
+          </div>
+        </div>
+      </div>
+			<div class="panel panel-info">
+
+        <div class="panel-heading">
+					<div class="panel-title">
+						<div class="row">
+							<div class="col-md-9 col-xs-9">
+								Product
+							</div>
+              <div class="col-md-3 col-xs-3 text-center">
+								Price
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+          <% @product_lists.each do |product_list| %>
+					<div class="row">
+						<div class="col-xs-9">
+              <%= product_list.product_name %>
+						</div>
+
+						<div class="col-xs-3 text-center">
+              $ <%= product_list.product_price %>
+						</div>
+					</div>
+          <hr>
+
+          <% end %>
+					<div class="row">
+						<div class="text-right">
+							<div class="col-xs-12 total-size">
+								Total: <span class="total-price-item">$ <%= @order.total %></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+      <br>
+
+      <div class="panel-heading-cart">
+        <div class="panel-title-cart">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              Sending info
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <%= simple_form_for @order do |f| %>
+          <div class="panel-heading">
+            <div class="panel-title">
+              <div class="row">
+                <div class="col-md-12 col-xs-12">
+                  contact:
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group col-lg-12">
+                  <%= @order.billing_name %> - <%= @order.billing_address %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="panel-heading">
+            <div class="panel-title">
+              <div class="row">
+                <div class="col-md-12 col-xs-12">
+                  Consignee:
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group col-lg-12">
+                 <%= @order.shipping_name %> - <%= @order.shipping_address %>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="pull-left round-cancel-cart">
+        <% if @order.order_placed? || @order.paid? %>
+          <%= link_to("Request Cancel order", apply_to_cancel_order_path(@order), method: :post, class: "btn  round-cancel-button-cart") %>
+        <% end %>
+      </div>
+      <% if !@order.is_paid %>
+      <div class="group pull-right round-submit-cart-pay">
+        <%= link_to("Paid by Alipay", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn round-submit-button-cart-pay") %>
+        <%= link_to("Paid by Wechat", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn round-submit-button-cart-pay") %>
+      </div>
+      <% else %>
+        <p class="text-center">The order has been paid</p>
+      <% end %>
+
+		</div>
+	</div>
+</div>

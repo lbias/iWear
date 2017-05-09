@@ -1,0 +1,52 @@
+<div class="row container">
+  <h2> New Product </h2>
+
+  <%= simple_form_for [:admin, @product] do |f| %>
+
+    <div class="group">
+      <%= f.input :title %>
+    </div>
+    <div class="group">
+        <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Category") %>
+    </div>
+    <div class="group">
+      <%= f.input :new_tag %>
+    </div>
+    <div class="group">
+      <%= f.input :hot_product_tag %>
+    </div>
+    <div class="group">
+      <%= f.input :description %>
+    </div>
+
+    <div class="group">
+      <%= f.input :quantity %>
+    </div>
+
+    <div class="group">
+      <%= f.input :price %>
+    </div>
+    <div class="group">
+      <%= f.input :image, as: :file%>
+    </div>
+
+    <div class="group">
+      <%= f.input :image2, as: :file%>
+    </div>
+
+    <div class="group">
+      <%= f.input :image3, as: :file%>
+    </div>
+
+    <div class="group">
+      <%= f.input :des_image, as: :file%>
+    </div>
+
+    <div class="group">
+      <%= f.input :app_image, as: :file%>
+    </div>
+
+    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+  <% end %>
+</div>

@@ -1,0 +1,240 @@
+
+<div class="productcatnav" >
+	<div id="flipkart2-navbar">
+	  <div class="container">
+	    <!-- <div class="home-title"> -->
+	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	        <ul class="nav navbar-nav navbar-left">
+	          <li><a id="home" href="/products">Category&nbsp&nbsp></a></li>
+	          <li><a id="home" href="#"><%= @product.category.name %>&nbsp&nbsp></a></li>
+						<li><a id="home" href="#"><%= @product.title %></a></li>
+	        </ul>
+	      </div>
+	    <!-- </div> -->
+
+	  </div>
+	</div>
+</div>
+
+	<div class="row container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </div>
+						  <div class="tab-pane" id="pic-2">
+                <% if @product.image2.present? %>
+                  <%= image_tag(@product.image2.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </div>
+						  <div class="tab-pane" id="pic-3">
+                <% if @product.image3.present? %>
+                  <%= image_tag(@product.image3.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+                <% end %>
+              </div>
+						  <!-- <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab">
+                <% if @product.image2.present? %>
+                  <%= image_tag(@product.image2.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab">
+                <% if @product.image3.present? %>
+                  <%= image_tag(@product.image3.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <!-- <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li> -->
+						</ul>
+
+					</div>
+					<div class="details col-md-6">
+
+						<h3 class="product-title"><%= @product.title %> </h3>
+						<h4 class="price">Price: <span> $ <%= @product.price %> </span></h4>
+            <br>
+						<!-- <div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<span class="review-no">41 reviews</span>
+						</div>
+            <br> -->
+						<p class="product-description"><%= @product.description %></p>
+            <br>
+						<br>
+            <div class="in-stock"> In Stock: <%= @product.quantity %> </div>
+
+						<br>
+						<br>
+
+						<%= link_to like_product_path(@product), method: :put do %>
+						<div class="details-thumbs-up">
+							<i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+							<%= @product.get_upvotes.size %>
+						</div>
+						<% end %>
+						<br>
+
+            <div class="product-details">
+						<% if @product.quantity.present? && @product.quantity > 0 %>
+							<%= link_to(add_to_cart_product_path(@product), :method => :post, :class => "btn details-add2cart") do %>
+							<svg class="cart-svg " width="13" height="13" viewBox="0 0 16 16 ">
+									<path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 " fill="#384245 "></path>
+							</svg>Add to cart
+							<% end %>
+						<% else %>
+						Sold out, you cannot purchase
+						<% end %>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+
+<div class="row container" id="container">
+	<div class="tab">
+
+	<ul class="tabs">
+		<li><a href="#"><b>About the product</b></a></li>
+		<li><a href="#"><b>Product Q&A</b></a></li>
+		<li><a href="#"><b>Product Review</b></a></li>
+	</ul> <!-- / tabs -->
+
+	<div class="tab_content">
+
+		<div class="tabs_item">
+			<h4>Product features</h4>
+			<hr>
+
+			<section class="desc-feature">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<% if @product.des_image.present? %>
+							<%= image_tag(@product.des_image.large.url) %>
+						<% end %>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+
+			<h4>Mobile Application</h4>
+			<hr>
+			<section class="desc-feature">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<% if @product.app_image.present? %>
+							<%= image_tag(@product.app_image.large.url) %>
+						<% end %>
+					</div>
+				</div>
+			</section>
+
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">
+			<h4>Question:</h4> Will it display the time without tapping it. I want a watch that will always tell me time just with a glance.
+      <h4>Answer:</h4> Time will display when you turn your wrist to face up
+			<br>
+			<br>
+
+			<h4>Question:</h4> Is the heart rate monitor accurate when doing various exercises? (running vs hitt vs dance)
+      <h4>Answer:</h4> Measuring HR at the wrist using light, instead of electrical impulses at the chest, is always going to be succeptible of inaccuracy. It's not necessarily the Fitbit, it's the method. At elevated rates there is going to be more attenuation by the time the blood gets to the capillaries in your wrist
+			<br>
+			<br>
+			<h4>Question:</h4> I want to buy the small HR2 but a bit worried that it might look bulky on a slender ladies wrist. Ladies what is your experience?
+      <h4>Answer:</h4> I don't find it to be too large for my wrist. I purchased a lightweight metal band for it, and it looks like a nice watch/bracelet. I often forget I have it on, so it doesn't feel too large.
+			<br>
+			<br>
+			<h4>Question:</h4> How do I determine what size to order?
+      <h4>Answer: </h4><p>Small fits wrists 5.5" - 6.7" in circumference
+Large fits wrists 6.7" - 8.1" in circumference
+XL fits wrists 8.1" - 9.3" in circumference
+By Heart Rate Monitors USA SELLER  on September 15, 2016</p>
+	<br>
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">
+			<div class="row">
+		  	<div class="col-sm-12 ">
+			    <h4>
+			      <%= @product.reviews.count %> Reviews
+			    </h4>
+			    <hr>
+			    <div >
+			      <%= render @product.reviews%>
+
+			      <%= render "reviews/form"%>
+			    </div>
+			  </div>
+			</div>
+		</div> <!-- / tabs_item -->
+
+	</div> <!-- / tab_content -->
+</div> <!-- / tab -->
+</div>
+
+
+
+
+ <script>
+
+ $(document).ready(function() {
+
+	(function ($) {
+		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+
+		$('.tab ul.tabs li a').click(function (g) {
+			var tab = $(this).closest('.tab'),
+				index = $(this).closest('li').index();
+
+			tab.find('ul.tabs > li').removeClass('current');
+			$(this).closest('li').addClass('current');
+
+			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
+			tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
+
+			g.preventDefault();
+		} );
+	})(jQuery);
+
+});
+</script>
